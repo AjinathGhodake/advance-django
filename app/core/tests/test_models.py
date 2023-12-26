@@ -54,10 +54,10 @@ class ModelTests(TestCase):
         user = get_user_model().objects.create_user(
             "test@example.com", "testpass123"
         )
-        recipe = models.Recipe.object.create(
+        recipe = models.Recipe.objects.create(
             user=user,
             title="Sample recipe name",
-            time_minute=5,
+            time_minutes=5,
             price=Decimal("5.50"),
             description="sample  recipe description.",
         )
